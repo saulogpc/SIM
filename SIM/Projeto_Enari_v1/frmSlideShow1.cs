@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Enari_v1
+namespace SIM
 {
     public partial class frmSlideShow1 : Form
     {

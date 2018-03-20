@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Projeto_Enari_v1
+namespace SIM
 {
     public partial class frmLogin : Form
     {
@@ -88,9 +88,21 @@ namespace Projeto_Enari_v1
 
         private void bunifuThinButton23_Click(object sender, EventArgs e)
         {
+            if (bunifuCheckbox1.Checked == true)
+            {
+                tipoUsuario = "empresa";
+            }
+
+            if (bunifuCheckbox2.Checked == true)
+            {
+                tipoUsuario = "pessoa";
+            }
+
             int id = Usuario.lastID + 1;
             Usuario user = new Usuario(Convert.ToString(id), bunifuMetroTextbox1.Text, bunifuMetroTextbox2.Text, bunifuMetroTextbox3.Text, tipoUsuario);
             Usuario.Adicionar(user);
+            frmMessageBox msg = new frmMessageBox("Usuário Cadastrado com sucesso!", 's');
+            msg.ShowDialog();
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
@@ -98,11 +110,13 @@ namespace Projeto_Enari_v1
             bool login = Usuario.Logar(txtUserNameEntrar.Text, txtPasswordEntrar.Text);
             if(login == true)
             {
-                MessageBox.Show("ok");
+                frmMessageBox msg = new frmMessageBox("Usuário Logado com Sucesso!", 's');
+                msg.ShowDialog();
             }
             else
             {
-                MessageBox.Show("Usuário ou Senha inválidos!");
+                frmMessageBox msg = new frmMessageBox("Usuário ou Senha Incorreta!", 'f');
+                msg.ShowDialog();
             }
         }
     }

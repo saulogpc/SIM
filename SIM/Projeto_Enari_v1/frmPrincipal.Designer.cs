@@ -1,4 +1,4 @@
-﻿namespace Projeto_Enari_v1
+﻿namespace SIM
 {
     partial class frmPrincipal
     {
@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.painelBarraTitulo = new System.Windows.Forms.Panel();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.picBoxLogoTelaLogin = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.painelConteudoCentral = new System.Windows.Forms.Panel();
             this.button6 = new System.Windows.Forms.Button();
@@ -44,12 +46,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.picBoxLogoTelaLogin = new System.Windows.Forms.PictureBox();
             this.painelBarraTitulo.SuspendLayout();
-            this.painelConteudoCentral.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogoTelaLogin)).BeginInit();
+            this.painelConteudoCentral.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -62,11 +62,37 @@
             this.painelBarraTitulo.BackColor = System.Drawing.Color.RoyalBlue;
             this.painelBarraTitulo.Controls.Add(this.bunifuImageButton1);
             this.painelBarraTitulo.Controls.Add(this.picBoxLogoTelaLogin);
+            this.painelBarraTitulo.Controls.Add(this.button2);
             this.painelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelBarraTitulo.Location = new System.Drawing.Point(0, 0);
             this.painelBarraTitulo.Name = "painelBarraTitulo";
             this.painelBarraTitulo.Size = new System.Drawing.Size(1184, 133);
             this.painelBarraTitulo.TabIndex = 0;
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = global::SIM.Properties.Resources.x;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(1142, 12);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 18);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 1;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 10;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            // 
+            // picBoxLogoTelaLogin
+            // 
+            this.picBoxLogoTelaLogin.Image = global::SIM.Properties.Resources.Logo_final_sfundo_v6;
+            this.picBoxLogoTelaLogin.Location = new System.Drawing.Point(2, 1);
+            this.picBoxLogoTelaLogin.Name = "picBoxLogoTelaLogin";
+            this.picBoxLogoTelaLogin.Size = new System.Drawing.Size(186, 130);
+            this.picBoxLogoTelaLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxLogoTelaLogin.TabIndex = 0;
+            this.picBoxLogoTelaLogin.TabStop = false;
             // 
             // bunifuDragControl1
             // 
@@ -86,13 +112,13 @@
             this.painelConteudoCentral.Controls.Add(this.textBox3);
             this.painelConteudoCentral.Controls.Add(this.textBox2);
             this.painelConteudoCentral.Controls.Add(this.textBox1);
-            this.painelConteudoCentral.Controls.Add(this.button2);
             this.painelConteudoCentral.Controls.Add(this.button1);
             this.painelConteudoCentral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelConteudoCentral.Location = new System.Drawing.Point(0, 133);
             this.painelConteudoCentral.Name = "painelConteudoCentral";
             this.painelConteudoCentral.Size = new System.Drawing.Size(1184, 529);
             this.painelConteudoCentral.TabIndex = 1;
+            this.painelConteudoCentral.Paint += new System.Windows.Forms.PaintEventHandler(this.painelConteudoCentral_Paint);
             // 
             // button6
             // 
@@ -171,7 +197,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(215, 162);
+            this.button2.Location = new System.Drawing.Point(1106, 104);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 1;
@@ -189,31 +215,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = global::Projeto_Enari_v1.Properties.Resources.x;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(1142, 12);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(30, 18);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 1;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 10;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // picBoxLogoTelaLogin
-            // 
-            this.picBoxLogoTelaLogin.Image = global::Projeto_Enari_v1.Properties.Resources.Logo_final_sfundo_v6;
-            this.picBoxLogoTelaLogin.Location = new System.Drawing.Point(2, 1);
-            this.picBoxLogoTelaLogin.Name = "picBoxLogoTelaLogin";
-            this.picBoxLogoTelaLogin.Size = new System.Drawing.Size(186, 130);
-            this.picBoxLogoTelaLogin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picBoxLogoTelaLogin.TabIndex = 0;
-            this.picBoxLogoTelaLogin.TabStop = false;
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -224,12 +225,13 @@
             this.Controls.Add(this.painelBarraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.painelBarraTitulo.ResumeLayout(false);
-            this.painelConteudoCentral.ResumeLayout(false);
-            this.painelConteudoCentral.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogoTelaLogin)).EndInit();
+            this.painelConteudoCentral.ResumeLayout(false);
+            this.painelConteudoCentral.PerformLayout();
             this.ResumeLayout(false);
 
         }

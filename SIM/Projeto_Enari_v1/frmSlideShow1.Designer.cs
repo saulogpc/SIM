@@ -1,4 +1,4 @@
-﻿namespace Projeto_Enari_v1
+﻿namespace SIM
 {
     partial class frmSlideShow1
     {
@@ -73,7 +73,7 @@
             // 
             this.slideTransition.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
             this.slideTransition2.SetDecoration(this.pictureBox3, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox3.Image = global::Projeto_Enari_v1.Properties.Resources.industria3;
+            this.pictureBox3.Image = global::SIM.Properties.Resources.industria3;
             this.pictureBox3.Location = new System.Drawing.Point(725, 12);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(687, 502);
@@ -85,7 +85,7 @@
             // 
             this.slideTransition.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
             this.slideTransition2.SetDecoration(this.pictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox2.Image = global::Projeto_Enari_v1.Properties.Resources.industria2;
+            this.pictureBox2.Image = global::SIM.Properties.Resources.industria2;
             this.pictureBox2.Location = new System.Drawing.Point(725, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(687, 502);
@@ -97,7 +97,7 @@
             // 
             this.slideTransition.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
             this.slideTransition2.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = global::Projeto_Enari_v1.Properties.Resources.industria1;
+            this.pictureBox1.Image = global::SIM.Properties.Resources.industria1;
             this.pictureBox1.Location = new System.Drawing.Point(10, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(687, 502);
