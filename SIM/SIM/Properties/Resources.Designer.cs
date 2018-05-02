@@ -83,6 +83,16 @@ namespace SIM.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foto_perfil_default {
+            get {
+                object obj = ResourceManager.GetObject("foto_perfil_default", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap industria1 {
             get {
                 object obj = ResourceManager.GetObject("industria1", resourceCulture);
@@ -106,6 +116,16 @@ namespace SIM.Properties {
         internal static System.Drawing.Bitmap industria3 {
             get {
                 object obj = ResourceManager.GetObject("industria3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap interrogacao {
+            get {
+                object obj = ResourceManager.GetObject("interrogacao", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -186,6 +206,26 @@ namespace SIM.Properties {
         internal static System.Drawing.Bitmap logo_SIM_v1 {
             get {
                 object obj = ResourceManager.GetObject("logo_SIM_v1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap menu_icon {
+            get {
+                object obj = ResourceManager.GetObject("menu_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NovaLogo2 {
+            get {
+                object obj = ResourceManager.GetObject("NovaLogo2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

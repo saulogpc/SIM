@@ -13,9 +13,13 @@ namespace SIM
     public partial class frmLogin : Form
     {
         string tipoUsuario="";
+        int login;
+        public frmPrincipal principal;
+
         public frmLogin()
         {
             InitializeComponent();
+            //this.tip = new customToolTip();
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -86,7 +90,7 @@ namespace SIM
             }
         }
 
-        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (bunifuCheckbox1.Checked == true)
             {
@@ -101,23 +105,32 @@ namespace SIM
             int id = Usuario.lastID + 1;
             Usuario user = new Usuario(Convert.ToString(id), bunifuMetroTextbox1.Text, bunifuMetroTextbox2.Text, bunifuMetroTextbox3.Text, tipoUsuario);
             Usuario.Adicionar(user);
+            Perfil profile = new Perfil(Convert.ToString(id), bunifuMetroTextbox1.Text, "-1");
+            Perfil.Adicionar(profile);
             frmMessageBox msg = new frmMessageBox("Usuário Cadastrado com sucesso!", 's');
             msg.ShowDialog();
         }
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-            bool login = Usuario.Logar(txtUserNameEntrar.Text, txtPasswordEntrar.Text);
-            if(login == true)
+            this.login = Usuario.Logar(txtUserNameEntrar.Text, txtPasswordEntrar.Text);
+            if(login!=-1)
             {
-                frmMessageBox msg = new frmMessageBox("Usuário Logado com Sucesso!", 's');
+                frmMessageBox msg = new frmMessageBox("Usuário "+txtUserNameEntrar.Text+" Logado com Sucesso!", 's');
                 msg.ShowDialog();
+                Constantes.idLogado = this.login;
+                if (principal != null) principal.logou(this.login);
             }
             else
             {
                 frmMessageBox msg = new frmMessageBox("Usuário ou Senha Incorreta!", 'f');
                 msg.ShowDialog();
             }
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            toolTip1.SetToolTip(this.pictureBox1, "Agora vai!");
         }
     }
 }

@@ -50,19 +50,19 @@ namespace SIM
             return resultado;
         }
 
-        public static bool Logar(string userName, string pass)
+        public static int Logar(string userName, string pass)
         {
-            bool login = false;
+            int idLogado = -1;
             List<Usuario> resultado = UserList.FindAll(x => x.Username == userName && x.Password==pass);
             if(resultado.Count==1)
             {
-                login = true;
+                idLogado = Convert.ToInt32(resultado[0].id);
             }
             else
             {
-                login = false;
+                idLogado = -1;
             }
-            return login; 
+            return idLogado; 
         }
 
     }

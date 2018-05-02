@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.slideA = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuCheckbox2 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -39,7 +40,7 @@
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuThinButton23 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnRegistrar = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -55,12 +56,15 @@
             this.loginTransition = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.slideA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.slideB.SuspendLayout();
             this.SuspendLayout();
             // 
             // slideA
             // 
+            this.slideA.Controls.Add(this.pictureBox1);
             this.slideA.Controls.Add(this.bunifuCheckbox2);
             this.slideA.Controls.Add(this.bunifuCheckbox1);
             this.slideA.Controls.Add(this.bunifuCustomLabel9);
@@ -68,7 +72,7 @@
             this.slideA.Controls.Add(this.bunifuMetroTextbox3);
             this.slideA.Controls.Add(this.bunifuCustomLabel4);
             this.slideA.Controls.Add(this.bunifuMetroTextbox2);
-            this.slideA.Controls.Add(this.bunifuThinButton23);
+            this.slideA.Controls.Add(this.btnRegistrar);
             this.slideA.Controls.Add(this.bunifuCustomLabel3);
             this.slideA.Controls.Add(this.bunifuMetroTextbox1);
             this.slideA.Controls.Add(this.bunifuCustomLabel2);
@@ -78,6 +82,18 @@
             this.slideA.Name = "slideA";
             this.slideA.Size = new System.Drawing.Size(411, 426);
             this.slideA.TabIndex = 5;
+            // 
+            // pictureBox1
+            // 
+            this.loginTransition.SetDecoration(this.pictureBox1, BunifuAnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::SIM.Properties.Resources.interrogacao;
+            this.pictureBox1.Location = new System.Drawing.Point(386, 96);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 29);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseHover += new System.EventHandler(this.pictureBox1_MouseHover);
             // 
             // bunifuCheckbox2
             // 
@@ -179,32 +195,32 @@
             this.bunifuMetroTextbox2.TabIndex = 1;
             this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuThinButton23
+            // btnRegistrar
             // 
-            this.bunifuThinButton23.ActiveBorderThickness = 1;
-            this.bunifuThinButton23.ActiveCornerRadius = 1;
-            this.bunifuThinButton23.ActiveFillColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton23.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.ActiveLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton23.BackColor = System.Drawing.Color.White;
-            this.bunifuThinButton23.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton23.BackgroundImage")));
-            this.bunifuThinButton23.ButtonText = "Registrar";
-            this.bunifuThinButton23.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.loginTransition.SetDecoration(this.bunifuThinButton23, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuThinButton23.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton23.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton23.IdleBorderThickness = 1;
-            this.bunifuThinButton23.IdleCornerRadius = 1;
-            this.bunifuThinButton23.IdleFillColor = System.Drawing.Color.SteelBlue;
-            this.bunifuThinButton23.IdleForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton23.IdleLineColor = System.Drawing.Color.RoyalBlue;
-            this.bunifuThinButton23.Location = new System.Drawing.Point(115, 363);
-            this.bunifuThinButton23.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton23.Name = "bunifuThinButton23";
-            this.bunifuThinButton23.Size = new System.Drawing.Size(180, 41);
-            this.bunifuThinButton23.TabIndex = 5;
-            this.bunifuThinButton23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton23.Click += new System.EventHandler(this.bunifuThinButton23_Click);
+            this.btnRegistrar.ActiveBorderThickness = 1;
+            this.btnRegistrar.ActiveCornerRadius = 1;
+            this.btnRegistrar.ActiveFillColor = System.Drawing.Color.RoyalBlue;
+            this.btnRegistrar.ActiveForecolor = System.Drawing.Color.White;
+            this.btnRegistrar.ActiveLineColor = System.Drawing.Color.RoyalBlue;
+            this.btnRegistrar.BackColor = System.Drawing.Color.White;
+            this.btnRegistrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegistrar.BackgroundImage")));
+            this.btnRegistrar.ButtonText = "Registrar";
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loginTransition.SetDecoration(this.btnRegistrar, BunifuAnimatorNS.DecorationType.None);
+            this.btnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnRegistrar.IdleBorderThickness = 1;
+            this.btnRegistrar.IdleCornerRadius = 1;
+            this.btnRegistrar.IdleFillColor = System.Drawing.Color.SteelBlue;
+            this.btnRegistrar.IdleForecolor = System.Drawing.Color.White;
+            this.btnRegistrar.IdleLineColor = System.Drawing.Color.RoyalBlue;
+            this.btnRegistrar.Location = new System.Drawing.Point(115, 363);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(5);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(180, 41);
+            this.btnRegistrar.TabIndex = 5;
+            this.btnRegistrar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // bunifuCustomLabel3
             // 
@@ -290,6 +306,7 @@
             this.txtPasswordEntrar.Name = "txtPasswordEntrar";
             this.txtPasswordEntrar.Size = new System.Drawing.Size(365, 44);
             this.txtPasswordEntrar.TabIndex = 1;
+            this.txtPasswordEntrar.Text = "teste1";
             this.txtPasswordEntrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuCustomLabel5
@@ -320,6 +337,7 @@
             this.txtUserNameEntrar.Name = "txtUserNameEntrar";
             this.txtUserNameEntrar.Size = new System.Drawing.Size(365, 44);
             this.txtUserNameEntrar.TabIndex = 0;
+            this.txtUserNameEntrar.Text = "teste1";
             this.txtUserNameEntrar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuThinButton24
@@ -390,22 +408,22 @@
             // 
             this.loginTransition.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.loginTransition.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.loginTransition.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.loginTransition.DefaultAnimation = animation1;
             this.loginTransition.Interval = 5;
             this.loginTransition.MaxAnimationTime = 2000;
             this.loginTransition.TimeStep = 0.03F;
@@ -464,6 +482,13 @@
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 10000;
+            this.toolTip1.InitialDelay = 500;
+            this.toolTip1.IsBalloon = true;
+            this.toolTip1.ReshowDelay = 100;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,6 +507,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.slideA.ResumeLayout(false);
             this.slideA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.slideB.ResumeLayout(false);
             this.slideB.PerformLayout();
             this.ResumeLayout(false);
@@ -494,7 +520,7 @@
         private System.Windows.Forms.Panel slideA;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton23;
+        private Bunifu.Framework.UI.BunifuThinButton2 btnRegistrar;
         private System.Windows.Forms.Panel slideB;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtPasswordEntrar;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
@@ -513,6 +539,8 @@
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox2;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel9;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
